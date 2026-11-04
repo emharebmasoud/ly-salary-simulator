@@ -100,13 +100,6 @@ export default function App() {
     return data;
   }, [calculations, inflationRate]);
 
-  const sectorCostData = useMemo(() => {
-    return initialSectors.map(sec => ({
-      name: sec.name,
-      value: Math.round((calculations.annualGrossTotal * (sec.percentage / 100)) / 1e9 * 100) / 100,
-    }));
-  }, [calculations]);
-
   const handleGradeChange = (index, field, value) => {
     const updated = [...grades];
     updated[index][field] = Number(value);
@@ -125,7 +118,7 @@ export default function App() {
               <h1 className="text-xl font-bold bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
                 نظام محاكاة واقتراح الموازنة التقديرية للمرتبات
               </h1>
-              <p className="text-xs text-slate-400">إدارة التخطيط والمالية | أداة استشراف وتقييم هيكل الأجور الموحد</p>
+              <p className="text-xs text-slate-400">إعداد: م. مسعود الناجي امحارب (emahrebmasoud@gmail.com)</p>
             </div>
           </div>
 
@@ -428,11 +421,11 @@ export default function App() {
 
             <div className="pt-12 grid grid-cols-2 gap-8 text-center text-sm font-bold border-t border-slate-200">
               <div>
-                <p className="mb-12">إعداد / لجنة التخطيط المالي والمحاكاة</p>
-                <p className="text-slate-400">التوقيع: ............................</p>
+                <p className="mb-2">إعداد وتصميم / م. مسعود الناجي امحارب</p>
+                <p className="text-slate-500 font-normal">البريد: emahrebmasoud@gmail.com</p>
               </div>
               <div>
-                <p className="mb-12">اعتماد / لجنة الإشراف والدراسات</p>
+                <p className="mb-12">الاعتماد الرسمي</p>
                 <p className="text-slate-400">التوقيع: ............................</p>
               </div>
             </div>
@@ -441,7 +434,7 @@ export default function App() {
       </main>
 
       <footer className="border-t border-slate-800 bg-slate-900/50 py-4 text-center text-xs text-slate-500 no-print">
-        نظام محاكاة واقتراح الموازنة التقديرية للمرتبات | الإصدار 1.0.0
+        نظام محاكاة واقتراح الموازنة التقديرية للمرتبات | إعداد: م. مسعود الناجي امحارب (emahrebmasoud@gmail.com)
       </footer>
     </div>
   );
