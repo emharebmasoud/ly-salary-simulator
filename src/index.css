@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-slate-900 text-slate-100 min-h-screen font-sans;
+  html, body {
+    @apply bg-slate-950 text-slate-100 min-h-screen font-sans overflow-x-hidden;
   }
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
   background: #0f172a;
