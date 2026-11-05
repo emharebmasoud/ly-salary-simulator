@@ -7,6 +7,7 @@ import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   Legend
 } from 'recharts';
+import { Analytics } from '@vercel/analytics/react';
 
 const initialGradeData = [
   { grade: 1, baseSalary: 1000, annualAllowance: 20, count: 120000 },
@@ -433,6 +434,7 @@ export default function App() {
       <footer className="border-t border-slate-800 bg-slate-900/50 py-3 text-center text-[11px] sm:text-xs text-slate-500 no-print px-4">
         نظام محاكاة واقتراح الموازنة التقديرية للمرتبات | إعداد: م. مسعود الناجي امحارب (emahrebmasoud@gmail.com)
       </footer>
+      <Analytics />
     </div>
   );
 }
